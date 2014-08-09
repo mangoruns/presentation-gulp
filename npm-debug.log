@@ -1,0 +1,72 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'bespoke-theme-Coverflow' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 warn package.json presentation-gulp@0.0.0 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'bespoke-theme-Coverflow', null ]
+7 verbose cache add name=undefined spec="bespoke-theme-Coverflow" args=["bespoke-theme-Coverflow",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'bespoke-theme-Coverflow',
+8 verbose parsed url   path: 'bespoke-theme-Coverflow',
+8 verbose parsed url   href: 'bespoke-theme-Coverflow' }
+9 silly lockFile 4ab662f6-bespoke-theme-Coverflow bespoke-theme-Coverflow
+10 verbose lock bespoke-theme-Coverflow /home/vico/.npm/4ab662f6-bespoke-theme-Coverflow.lock
+11 silly lockFile 4ab662f6-bespoke-theme-Coverflow bespoke-theme-Coverflow
+12 silly lockFile 4ab662f6-bespoke-theme-Coverflow bespoke-theme-Coverflow
+13 verbose addNamed [ 'bespoke-theme-Coverflow', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile ddcc2dc7-bespoke-theme-Coverflow bespoke-theme-Coverflow@
+16 verbose lock bespoke-theme-Coverflow@ /home/vico/.npm/ddcc2dc7-bespoke-theme-Coverflow.lock
+17 silly addNameRange { name: 'bespoke-theme-Coverflow', range: '*', hasData: false }
+18 verbose url raw bespoke-theme-Coverflow
+19 verbose url resolving [ 'http://registry.cnpmjs.org/', './bespoke-theme-Coverflow' ]
+20 verbose url resolved http://registry.cnpmjs.org/bespoke-theme-Coverflow
+21 info trying registry request attempt 1 at 13:10:17
+22 http GET http://registry.cnpmjs.org/bespoke-theme-Coverflow
+23 http 404 http://registry.cnpmjs.org/bespoke-theme-Coverflow
+24 verbose headers { server: 'nginx/1.4.1 (Ubuntu)',
+24 verbose headers   date: 'Sat, 09 Aug 2014 05:10:17 GMT',
+24 verbose headers   'content-type': 'application/json; charset=utf-8',
+24 verbose headers   'transfer-encoding': 'chunked',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-powered-by': 'koa',
+24 verbose headers   'x-readtime': '11',
+24 verbose headers   'content-encoding': 'gzip' }
+25 silly registry.get cb [ 404,
+25 silly registry.get   { server: 'nginx/1.4.1 (Ubuntu)',
+25 silly registry.get     date: 'Sat, 09 Aug 2014 05:10:17 GMT',
+25 silly registry.get     'content-type': 'application/json; charset=utf-8',
+25 silly registry.get     'transfer-encoding': 'chunked',
+25 silly registry.get     connection: 'keep-alive',
+25 silly registry.get     'x-powered-by': 'koa',
+25 silly registry.get     'x-readtime': '11',
+25 silly registry.get     'content-encoding': 'gzip' } ]
+26 silly lockFile ddcc2dc7-bespoke-theme-Coverflow bespoke-theme-Coverflow@
+27 silly lockFile ddcc2dc7-bespoke-theme-Coverflow bespoke-theme-Coverflow@
+28 error 404 404 Not Found: bespoke-theme-Coverflow
+28 error 404
+28 error 404 'bespoke-theme-Coverflow' is not in the npm registry.
+28 error 404 You should bug the author to publish it
+28 error 404 It was specified as a dependency of 'presentation-gulp'
+28 error 404
+28 error 404 Note that you can also install from a
+28 error 404 tarball, folder, or http url, or git url.
+29 error System Linux 3.13.0-24-generic
+30 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "bespoke-theme-Coverflow"
+31 error cwd /home/vico/gulp
+32 error node -v v0.10.28
+33 error npm -v 1.4.9
+34 error code E404
+35 verbose exit [ 1, true ]

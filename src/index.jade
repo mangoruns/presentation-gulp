@@ -1,0 +1,164 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Gulp
+
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  body.coverflow
+
+    article
+
+      section
+        h1 Gulp
+        h3 The streaming build system
+
+
+      section
+        h1 Start
+        h3 Installation
+        pre
+          code.language-javascript.
+            // Install gulp globally
+            npm install -g gulp
+
+            // Install gulp in your project devDependencies
+            npm install --save-dev gulp
+
+      section
+        h3 Create a <a href="#">gulpfile.js</a>
+
+        pre
+          code.language-javascript.
+            var gulp = require('gulp');
+
+            gulp.task('default', function() {
+              // place code for your default task here
+            });
+
+      section
+        h3 Run gulp
+        pre
+          code.language-javascript.
+            gulp
+
+            // To run individual tasks
+            gulp [task] [othertask]
+
+      section
+        h3 Gulp 仅有 5 个方法就能组合出你需要的任务流程
+
+        ul
+          li
+          li 
+            a task
+          li 
+            a run
+          li 
+            a watch
+          li 
+            a src
+          li 
+            a dest
+
+      section
+        h1 Example
+        pre
+          code.language-javascript.
+            // 引入 gulp
+            var gulp = require('gulp');
+
+            // 引入 Plugins
+            var compass = require('gulp-compass');
+
+      section
+        pre
+          code.language-javascript.
+
+            // 创建 Compass 任务
+            gulp.task('compass', function() {
+              gulp.src('./scss/**')
+                .pipe(compass({
+                    comments: false,
+                    css: 'css',
+                    sass: 'scss',
+                    image: 'img'
+                }));
+            });
+
+      section
+        pre
+          code.language-javascript.
+
+            // 默认任务
+            gulp.task('default', function() {
+                gulp.run('compass');
+
+                gulp.watch([
+                    './scss/**',
+                    './img/**'
+                    ], function(event) {
+                    gulp.run('compass');
+                });
+            });
+
+      section
+        h1 CoreDesign
+        ul
+          li 
+          li 
+            a Based on Node Streams API
+
+      section
+        h3 <a href="#">Tradition</a> VS <a href="#">Streams</a>
+        pre
+          code.language-javascript.
+            var fs = require('fs');
+
+            function copy(src, target) {
+                fs.writeFileSync(target, fs.readFileSync(src));
+            }
+
+            copy('./test.txt', './test1.txt');
+
+      section
+        h3 <a href="#">Tradition</a> VS <a href="#">Streams</a>
+        pre
+          code.language-javascript.
+            var fs = require('fs');
+
+            function copy(src, target) {
+                fs.createReadStream(src).pipe(fs.createWriteStream(target));
+            }
+
+            copy('./test.txt', './test2.txt');
+
+      section
+        h3 
+          a stream.pipe(res)
+
+      section(data-bespoke-hash='named-route')
+        h2 Named Route
+        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
+        p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
+
+      section(data-bespoke-state='emphatic')
+        h2 Emphatic Slide!
+        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-state">bespoke-state</a>
+
+      section
+        h2.bullet Just the beginning...
+        br
+        ul
+          li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
+          li Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
+          li Edit JavaScript in <em>'src/scripts/main.js'</em>
+        br
+        ul
+          li
+            strong Enjoy! :)
+            a(href='http://twitter.com/markdalgleish')  -@markdalgleish
+
+    script(src='build/build.js')
